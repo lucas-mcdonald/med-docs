@@ -7,8 +7,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://med-docs.vercel.app/'),
-  title: 'Anni\'s Special Chatbot',
-  description: 'Chatbot for Anni to help her with the medical records systems',
+  title: 'MedDocs',
+  description: 'Chatbot for medical staff to help them with their medical records systems',
 };
 
 export const viewport = {
