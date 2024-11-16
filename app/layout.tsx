@@ -55,6 +55,10 @@ export default async function RootLayout({
             __html: THEME_COLOR_SCRIPT,
           }}
         />
+        <link rel="apple-touch-icon" href="/AppIconSmall.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="MedDocs" />
       </head>
       <body className="antialiased">
         <ThemeProvider
