@@ -22,6 +22,20 @@
       "when": 1730725226313,
       "tag": "0002_wandering_riptide",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1731253647619,
+      "tag": "0003_melted_riptide",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1731256756041,
+      "tag": "0004_mighty_prowler",
+      "breakpoints": true
     }
   ]
 }

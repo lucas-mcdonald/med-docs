@@ -24,14 +24,14 @@ import { Textarea } from '../ui/textarea';
 
 const suggestedActions = [
   {
-    title: 'What is the weather',
-    label: 'in San Francisco?',
-    action: 'What is the weather in San Francisco?',
+    title: 'How do I',
+    label: 'access a patients chart?',
+    action: 'How do I access a patients chart?',
   },
   {
-    title: 'Help me draft an essay',
-    label: 'about Silicon Valley',
-    action: 'Help me draft a short essay about Silicon Valley',
+    title: 'What is',
+    label: 'the best way to document a patient visit?',
+    action: 'What is the best way to document a patient visit?',
   },
 ];
 
@@ -177,6 +177,7 @@ export function MultimodalInput({
         const successfullyUploadedAttachments = uploadedAttachments.filter(
           (attachment) => attachment !== undefined
         );
+        console.log('successfullyUploadedAttachments', successfullyUploadedAttachments);
 
         setAttachments((currentAttachments) => [
           ...currentAttachments,
