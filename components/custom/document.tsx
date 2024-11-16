@@ -3,7 +3,7 @@ import { SetStateAction } from 'react';
 import { UIBlock } from './block';
 import { FileIcon, LoaderIcon, MessageIcon, PencilEditIcon } from './icons';
 
-const getActionText = (type: 'create' | 'update' | 'request-suggestions') => {
+const getActionText = (type: 'create' | 'update' | 'request-suggestions' | 'get-information') => {
   switch (type) {
     case 'create':
       return 'Creating';
@@ -11,13 +11,15 @@ const getActionText = (type: 'create' | 'update' | 'request-suggestions') => {
       return 'Updating';
     case 'request-suggestions':
       return 'Adding suggestions';
+    case 'get-information':
+      return 'Found information';
     default:
       return null;
   }
 };
 
 interface DocumentToolResultProps {
-  type: 'create' | 'update' | 'request-suggestions';
+  type: 'create' | 'update' | 'request-suggestions' | 'get-information';
   result: any;
   block: UIBlock;
   setBlock: (value: SetStateAction<UIBlock>) => void;
@@ -44,8 +46,8 @@ export function DocumentToolResult({
 
         setBlock({
           documentId: result.id,
-          content: '',
-          title: result.title,
+          content: result.map((result: any) => `-------Chunk matched ${Math.round(result.similarity * 100)}%--------\n\n${result.name}`).join('\n\n'),
+          title: "Information retrieved from database",
           isVisible: true,
           status: 'idle',
           boundingBox,
@@ -59,6 +61,8 @@ export function DocumentToolResult({
           <PencilEditIcon />
         ) : type === 'request-suggestions' ? (
           <MessageIcon />
+        ) : type === 'get-information' ? (
+          <FileIcon />
         ) : null}
       </div>
       <div className="">

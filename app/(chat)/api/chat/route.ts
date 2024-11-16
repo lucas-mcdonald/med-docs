@@ -98,9 +98,9 @@ export async function POST(request: Request) {
         execute: async ({ content, name }) => createResource({ name, content }),
       }),
       getInformation: tool({
-        description: `get information from your knowledge base to answer questions. This should be used for almost every question`,
+        description: `get information from your knowledge base to answer questions. This should be used before answering any question.`,
         parameters: z.object({
-          question: z.string().describe('the users question'),
+          question: z.string().describe('the user\'s question'),
         }),
         execute: async ({ question }) => findRelevantContent(question),
       }),

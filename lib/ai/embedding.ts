@@ -37,7 +37,6 @@ export const generateEmbeddings = async (
     model: embeddingModel,
     values: chunks,
   });
-  console.log(embeddings);
   return embeddings.map((e, i) => ({ content: chunks[i], embedding: e }));
 };
 

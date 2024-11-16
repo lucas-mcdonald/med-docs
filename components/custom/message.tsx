@@ -88,6 +88,13 @@ export const PreviewMessage = ({
                           block={block}
                           setBlock={setBlock}
                         />
+                      ) : toolName === 'getInformation' ? (
+                        <DocumentToolResult
+                          type="get-information"
+                          result={result}
+                          block={block}
+                          setBlock={setBlock}
+                        />
                       ) : (
                         <pre>{JSON.stringify(result, null, 2)}</pre>
                       )}
