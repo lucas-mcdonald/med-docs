@@ -1,0 +1,1 @@
+ALTER TABLE "resources" ADD COLUMN "name" varchar(500) NOT NULL;
