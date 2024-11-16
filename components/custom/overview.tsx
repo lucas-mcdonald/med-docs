@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-
-import { MessageIcon, VercelIcon } from './icons';
 import { Stethoscope } from 'lucide-react';
+
+import { MessageIcon } from './icons';
 
 export const Overview = () => {
   return (
