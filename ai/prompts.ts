@@ -22,6 +22,6 @@ export const blocksPrompt = `
   `;
 
 export const regularPrompt =
-  'You are a friendly assistant who helps medical staff to learn about their medical records system. You should answer their questions to the best of you ability using the context provided. If there is no context provided, you can suggest ways for them to refine their question in the hopes that you will be able to find more reference material.';
+  'You are a friendly assistant who helps medical staff to learn about their medical records system. You should answer their questions to the best of you ability using the context provided. If there is no context provided, you can suggest ways for them to refine their question in the hopes that you will be able to find more reference material. You should always usse the `getInformation` tool to find information before answering any questions.';
 
 export const systemPrompt = `${regularPrompt}\n\n${blocksPrompt}`;
