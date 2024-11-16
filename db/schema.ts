@@ -1,5 +1,6 @@
 import { generateId, nanoid } from 'ai';
 import { InferSelectModel, sql } from 'drizzle-orm';
+import { createSelectSchema } from 'drizzle-zod';
 import {
   pgTable,
   varchar,
@@ -14,7 +15,6 @@ import {
   index,
 } from 'drizzle-orm/pg-core';
 import { z } from 'zod';
-import { createSelectSchema } from 'drizzle-zod';
 
 export const user = pgTable('User', {
   id: uuid('id').primaryKey().notNull().defaultRandom(),

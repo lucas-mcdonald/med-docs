@@ -17,6 +17,8 @@ import {
   saveChat,
   saveMessages,
 } from '@/db/queries';
+import { createResource } from '@/lib/actions/resources';
+import { findRelevantContent } from '@/lib/ai/embedding';
 import {
   generateUUID,
   getMostRecentUserMessage,
@@ -24,8 +26,6 @@ import {
 } from '@/lib/utils';
 
 import { generateTitleFromUserMessage } from '../../actions';
-import { createResource } from '@/lib/actions/resources';
-import { findRelevantContent } from '@/lib/ai/embedding';
 
 export const maxDuration = 60;
 
