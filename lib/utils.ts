@@ -89,10 +89,10 @@ export function convertToUIMessages(
 ): Array<Message> {
   return messages.reduce((chatMessages: Array<Message>, message) => {
     if (message.role === 'tool') {
-      //return addToolMessageToChat({
-      //  toolMessage: message as CoreToolMessage,
-      //  messages: chatMessages,
-      //});
+      return addToolMessageToChat({
+        toolMessage: message as CoreToolMessage,
+        messages: chatMessages,
+      });
     }
 
     let textContent = '';
